@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            font-size: 1.1em;
+            color: #555;
+        }
+        .profile-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 300px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 4px solid #3498db;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        .interactive-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+        }
+        .interactive-btn:hover {
+            background: linear-gradient(45deg, #2980b9, #1abc9c);
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(52, 152, 219, 0.6);
+        }
+        .interactive-btn:active {
+            transform: translateY(0);
+        }
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .skill-item {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease;
+        }
+        .skill-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ecf0f1;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Interactive Webpage</h1>
+        <p>
+            This webpage demonstrates the fundamental concepts of web development using HTML, CSS, and JavaScript. 
+            It showcases proper HTML structure, modern CSS styling techniques, and interactive JavaScript functionality.
+        </p>
+        <h2>About This Project</h2>
+        <p>
+            This project is part of a web development internship program, specifically designed to teach and apply 
+            foundational concepts in front-end development. The webpage includes various HTML elements, 
+            comprehensive CSS styling, and interactive JavaScript features.
+        </p>
+        <img src="coding.jpg" 
+             alt="Web Development Workspace" 
+             class="profile-image">
+        <h2>Technologies Used</h2>
+        <div class="skills-list">
+            <div class="skill-item">
+                <h3>HTML5</h3>
+                <p>Semantic markup and proper document structure</p>
+            </div>
+            <div class="skill-item">
+                <h3>CSS3</h3>
+                <p>Modern styling with animations and responsive design</p>
+            </div>
+            <div class="skill-item">
+                <h3>JavaScript</h3>
+                <p>Interactive functionality and DOM manipulation</p>
+            </div>
+        </div>
+        <h2>Interactive Features</h2>
+        <p>
+            Click the button below to see JavaScript in action! This demonstrates basic event handling 
+            and user interaction on the webpage.
+        </p>
+        <button class="interactive-btn" onclick="showAlert()">
+            Click Me for a Surprise! 🎉
+        </button>
+        <h2>Useful Resources</h2>
+        <p>
+            Here are some helpful links for learning web development:
+            <br><br>
+            📚 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN HTML Documentation</a>
+            <br>
+            🎨 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN CSS Documentation</a>
+            <br>
+            ⚡ <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN javascript documentation</a>
+            <br>
+            🌐 <a href="https://www.w3schools.com/">W3 schools</a>
+        </p>
+
+        <h2>Learning Journey</h2>
+        <p>
+            Web development is an exciting field that combines creativity with technical skills. 
+            This webpage represents the beginning of that journey, demonstrating how HTML provides structure, 
+            CSS adds visual appeal, and JavaScript brings interactivity to life.
+        </p>
+    </div>
+    <!-- JavaScript for interactivity -->
+    <script>
+        function showAlert() {
+            const messages = [
+                "🎉 Congratulations! You've successfully interacted with JavaScript!",
+                "🚀 Welcome to the world of web development!",
+                "✨ Great job! You're learning HTML, CSS, and JavaScript!",
+                "🎯 Task 1 completed successfully!",
+                "💻 You're on your way to becoming a web developer!"
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            alert(randomMessage);
+            console.log("Button clicked! Alert displayed successfully.");
+            const button = document.querySelector('.interactive-btn');
+            const originalText = button.textContent;
+            button.textContent = "Thanks for clicking! 😊";
+            setTimeout(function() {
+                button.textContent = originalText;
+            }, 2000);
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("🎉 Webpage loaded successfully!");
+            console.log("📚 This demonstrates HTML structure, CSS styling, and JavaScript functionality.");
+            const skillItems = document.querySelectorAll('.skill-item');
+            skillItems.forEach(function(item) {
+                item.addEventListener('mouseenter', function() {
+                    this.style.backgroundColor = '#f0f8ff';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.backgroundColor = '';
+                });
+            });
+            let clickCount = 0;
+            const button = document.querySelector('.interactive-btn');
+            button.addEventListener('click', function() {
+                clickCount++;
+                console.log(`Button has been clicked ${clickCount} times!`);
+            });
+        });
+    </script>
+</body>
+</html>
